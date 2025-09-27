@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawn news project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1 class="logo">Dawn News</h1>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">World</a>
+        <a href="#">Sports</a>
+        <a href="#">Business</a>
+        <a href="#">Tech</a>
+        <a href="#">Entertainment</a>
+        <a href="#">Health</a>
+        <a href="#">Science</a>
+        <a href="#">Magazine</a>
+        <a href="#">Videos</a>
+        <a href="#">Opinion</a>
+        <a href="#">Blogs</a>
+        <a href="#">Podcasts</a>
+        <a href="#">E-Paper</a>
+        <a href="#">Jobs</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    <!-- slider -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="slider-img1.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="slider-img2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="slider-img3.webp" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden" id="left">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden" id="right">Next</span>
+        </button>
+    </div>
+
+
+    <!--news cards -->
+    <div class="card-container">
+    <div class="card">
+        <img src="american-news.jpg" class="card-img-top" alt="News 1">
+        <div class="card-body">
+            <h5 class="card-title">Irani Envoy</h5>
+            <p class="card-text">
+                The newly appointed Iranian envoy emphasized the importance of strengthening bilateral relations,
+                highlighting trade, cultural exchange, and regional security cooperation.
+                <span class="extraContent" style="display:none;">
+                    He also stressed on expanding people-to-people connections, mutual investment opportunities,
+                    and joint initiatives in education and technology, which he believes will open new doors
+                    for long-term collaboration.
+                </span>
+            </p>
+            <button onclick="readMore(this)" class="btn">Read More</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="summer vacations.avif" class="card-img-top" alt="News 2">
+        <div class="card-body">
+            <h5 class="card-title">Summer Vacations</h5>
+            <p class="card-text">
+                The government has officially announced school vacations, giving students and families a chance to relax and spend quality time together. Many are planning to travel, while others look forward to enjoying leisure activities at home
+                <span class="extraContent" style="display:none;">
+                    Popular destinations are expected to see an influx of visitors, and local businesses are gearing up for the busy season. Safety measures and travel guidelines have been emphasized to ensure a smooth and enjoyable holiday period for everyone.
+                </span>
+            </p>
+            <button onclick="readMore(this)" class="btn">Read More</button>
+        </div>
+    </div>
+
+    
+    <div class="card">
+        <img src="religonal.webp" class="card-img-top" alt="News 2">
+        <div class="card-body">
+            <h5 class="card-title">Regional Security</h5>
+            <p class="card-text">
+                Officials discussed the importance of regional stability during the envoy visit.
+                Officials discussed the importance of regional stability during the envoy visit.
+                Officials discussed the importance of regional stability during the envoy visit.
+                <span class="extraContent" style="display:none;">
+                    They highlighted collaborative efforts to address common challenges, including
+                    They highlighted joint efforts to tackle cross-border challenges and promote peace initiatives.
+                </span>
+            </p>
+            <button onclick="readMore(this)" class="btn">Read More</button>
+        </div>
+    </div>
+</div>
+
+    <!-- paragraph with read more button -->
+    <p class="para-heading">"Online education has become an essential part of modern learning, providing students with flexibility and access to resources from anywhere in the world. Many schools and universities are now offering digital classrooms as a core part of their curriculum."<span>
+        <span id="para">Experts believe that online platforms are not only making education more inclusive but also preparing students for a technology-driven future. However, challenges such as internet connectivity, lack of face-to-face interaction, and digital distractions still need to be addressed for better results."</span>
+     </span>
+    </p>
+    <button id="parabtn" onclick="readPara()">Read More</button> 
+
+    <!-- more cards with only left side -->
+    <div class="more-cards">
+        <div class="left-card">
+            <img src="bussiness.jpeg" alt="Business News">
+            <h3>Business Growth</h3>
+            <p>The business sector is experiencing significant growth, with new startups emerging and established companies expanding their operations. This trend is driven by innovation, increased consumer demand, and favorable economic policies.</p>
+        </div>
+        <div class="left-card">
+            <img src="tech.jpeg" alt="Tech News">
+            <h3>Tech Innovations</h3>
+            <p>Recent advancements in technology are transforming various industries, from healthcare to finance. Innovations such as artificial intelligence, blockchain, and the Internet of Things are creating new opportunities and challenges for businesses and consumers alike.</p>
+        </div>
+        <div class="left-card">
+            <img src="health.jpeg" alt="Health News">
+            <h3>Health Awareness</h3>
+            <p>There is a growing awareness about health and wellness, with more people adopting healthier lifestyles. This includes increased focus on nutrition, physical activity, mental health, and preventive care to improve overall well-being.</p>
+        </div>
+
+         <!-- video slider -->
+<div class="video-section">
+  <h3>News Highlights</h3>
+  <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <iframe width="100%" height="240"
+                      src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                      title="Nature Relaxing Video" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+              </iframe>
+          </div>
+        
+          <div class="carousel-item">
+              <iframe width="100%" height="240"
+                      src="https://www.youtube.com/embed/LXb3EKWsInQ"
+                      title="Travel Vlog" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+              </iframe>
+          </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div>
+    </div>
+
+    <!-- newspaper img -->
+    <div class="newspaper-container">
+         <img src="newspaper.jpg" alt="" id="newspaper-img">
+         <p>
+            Stay informed with the latest news and updates from around the world. Our comprehensive coverage includes breaking news, in-depth analysis, and expert opinions on a wide range of topics. Whether you're interested in politics, business, technology, health, or entertainment, we've got you covered. Our team of experienced journalists is dedicated to bringing you accurate and timely information to help you stay ahead in today's fast-paced world. <br>
+            Stay informed with the latest news and updates from around the world. Our comprehensive coverage includes breaking news, in-depth analysis, and expert opinions on a wide range of topics. Whether you're interested in politics, business, technology, health, or entertainment, we've got you covered. Our team of experienced journalists is dedicated to bringing you accurate and timely information to help you stay ahead in today's fast-paced world.
+
+         </p>
+    </div>
+
+<!-- 6 cards -->
+      <div class="custom-card-container">
+    <div class="custom-card">
+      <img src="card-six-img1.jpg" alt="Card 1">
+      <h3>Indian Fight</h3>
+      <p>India is facing intense political and social challenges shaping its future.</p>
+    </div>
+    <div class="custom-card">
+      <img src="card-six-img2.jpg" alt="Card 2">
+      <h3>Breaking News</h3>
+      <p>Breaking news delivers urgent stories that demand instant attention.</p>
+    </div>
+    <div class="custom-card">
+      <img src="card-six-img3.jpeg" alt="Card 3">
+      <h3>Infinity</h3>
+      <p>Infinity symbolizes endless possibilities and boundless imagination.</p>
+    </div>
+    <div class="custom-card">
+      <img src="card-six-img4.jpg" alt="Card 4">
+      <h3>Library</h3>
+      <p>A library is a treasure of knowledge, offering wisdom beyond time</p>
+    </div>
+    <div class="custom-card">
+      <img src="card-six-img5.jpeg" alt="Card 5">
+      <h3>Newspaper</h3>
+      <p>A newspaper connects people with the world through daily updates.</p>
+    </div>
+    <div class="custom-card">
+      <img src="card-six-img6.jpeg" alt="Card 6">
+      <h3>Media invoke</h3>
+      <p>Media invoke influences minds and shapes public perception every day.</p>
+    </div>
+  </div>
+
+
+    <!-- footer -->
+
+    <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>News</h3>
+        <ul>
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">Pakistan</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">World</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Opinion</h3>
+        <ul>
+          <li><a href="#">Editorials</a></li>
+          <li><a href="#">Columns</a></li>
+          <li><a href="#">Letters</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Culture</h3>
+        <ul>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Music</a></li>
+          <li><a href="#">TV</a></li>
+          <li><a href="#">Theatre</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Multimedia</h3>
+        <ul>
+          <li><a href="#">Images</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Infographics</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Prism</h3>
+        <ul>
+          <li><a href="#">Youth</a></li>
+          <li><a href="#">Gender</a></li>
+          <li><a href="#">Equality</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Popular</h3>
+        <ul>
+          <li><a href="#">Most Read</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Editor's Picks</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Dawn Media Group. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

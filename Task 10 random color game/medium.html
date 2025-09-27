@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="button">
+        <a href="index.html">
+            <button>Easy</button>
+        </a>
+
+        <a href="medium.html">
+            <button>Medium</button>
+        </a>
+
+        <a href="hard.html">
+            <button>Hard</button>
+        </a>
+    </div>
+    <h1>Random Color Match Game</h1>
+    <p id="score-display">Score: 0</p>
+    <div id="game-container">
+
+    </div>
+    <script>
+        let container = document.getElementById('game-container');
+let scoreDisplay = document.getElementById('score-display');
+let score = 0;
+let colors = ['brown', 'gray', 'purple', 'orange', 'red', 'blue', 'green', 'yellow'];
+
+
+function createColorBox(color){
+    let box = document.createElement('div');
+    box.classList.add('color-box');
+    box.style.backgroundColor = color;
+    box.addEventListener("click",checkColor);
+    container.appendChild(box);
+    return box;
+}
+function checkColor(event){
+    let clickedBox = event.target;
+    let randomColor = colors[Math.floor(Math.random()*colors.length)];
+    if(clickedBox.style.backgroundColor === randomColor){
+        score++;
+        scoreDisplay.textContent = `Score: ${score}`;
+        alert("Yay!🎊 Your score is now " + score);
+    } else {
+        alert("Oops!🥺 The correct color was " + randomColor);
+    }
+}
+
+for (let i=0; i<colors.length; i++){
+    createColorBox(colors[i]);
+}
+
+
+    </script>
+</body>
+</html>
